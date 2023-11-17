@@ -105,6 +105,8 @@ questions = [
 
 ]
 
+
+
 score = 0
 
 feedback = []
@@ -114,7 +116,7 @@ st.title("Quiz Simple")
 for i, q in enumerate(questions, 1):
     st.markdown(f"<span style='font-weight:bold'> Question {i}:  {q['question']}</span>", unsafe_allow_html=True)
 
-if len(q['correct_answers']) > 1:
+    if len(q['correct_answers']) > 1:
         user_answers = []
         for option in q['options']:
             if st.checkbox(option, key=f'question_{i}_{option}'):
